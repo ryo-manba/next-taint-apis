@@ -16,10 +16,5 @@ export const Profile = async ({ userId }: Props) => {
     return <div>User not found.</div>;
   }
 
-  const dirty = {
-    ...user,
-    password: user.password.toUpperCase(),
-  };
-
-  return <InfoCard user={dirty} />;
+  return <InfoCard user={user} />;
 };
